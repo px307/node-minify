@@ -18,5 +18,8 @@
       }
     ]
   },
-  "extends": "prettier"
+  "extends": "prettier",
+  "parserOptions": {
+    "sourceType": "module"
+  }
 }

@@ -10,6 +10,8 @@ __tests__
 .travis.yml
 appveyor.yml
 yarn.lock
+lib
+.babelrc
 .codeclimate.yml
 .yarnrc
 circle.yml
