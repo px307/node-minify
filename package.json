@@ -9,7 +9,7 @@
     "url": "http://2clics.net"
   },
   "license": "MIT",
-  "main": "dist/node-minify.js",
+  "main": "lib/node-minify.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/srod/node-minify.git"
@@ -36,7 +36,7 @@
     "butternut"
   ],
   "scripts": {
-    "eslint": "eslint lib test || true",
+    "eslint": "eslint src test || true",
     "pretest": "npm run eslint",
     "test-cov": "npm run pretest && jest --coverage && npm run clean",
     "test": "jest",
@@ -53,7 +53,7 @@
     "prettier": "prettier",
     "prettier-write": "npm run prettier -- --single-quote --print-width 120 --write",
     "prettier-project": "npm run prettier-write -- '{lib,__tests__}/**/*.js'",
-    "build": "babel lib --out-dir dist"
+    "build": "babel src --out-dir lib"
   },
   "dependencies": {
     "babel-core": "6.25.0",
@@ -82,9 +82,12 @@
     "lint-staged": "4.0.3",
     "prettier": "1.5.3"
   },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
   "jest": {
-    "notify": true,
-    "verbose": true,
     "testEnvironment": "node"
   },
   "lint-staged": {

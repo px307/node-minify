@@ -8,9 +8,11 @@
 
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 30000;
 
-var childProcess = require('child_process');
-var mkdirp = require('mkdirp');
-var nodeMinify = require('../lib/node-minify');
+import childProcess from 'child_process';
+import mkdirp from 'mkdirp';
+import app from '../src/node-minify';
+
+const nodeMinify = app;
 
 var oneFile = __dirname + '/../examples/public/js/sample.js';
 var filesArray = [__dirname + '/../examples/public/js/sample.js', __dirname + '/../examples/public/js/sample2.js'];
@@ -620,7 +622,6 @@ describe('node-minify', function() {
     });
     test('should not throw with --use_strict flag', function(done) {
       jest.resetModules();
-      var nodeMinify = require('../lib/node-minify');
       var options = {};
       options.minify = {
         compressor: 'gcc',

@@ -12,7 +12,7 @@
 
 var fs = require('fs');
 var mkdirp = require('mkdirp');
-var utils = require('../lib/utils');
+var utils = require('./utils');
 var babili = require('./compressors/babili');
 var butternut = require('./compressors/butternut');
 var cleanCSS = require('./compressors/clean-css');
