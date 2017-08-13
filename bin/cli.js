@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-// /Users/rodolphe/.nvm/versions/node/v7.2.0/bin/node-minify -c all -i lol.js -o lolo.js
+// /Users/rodolphe/.nvm/versions/node/v8.3.0/bin/node-minify -c all -i lol.js -o lolo.js
 
 var program = require('commander');
 var cli = require('../lib/cli');

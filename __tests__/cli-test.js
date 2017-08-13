@@ -8,7 +8,7 @@ var utils = require('../lib/utils');
 
 describe('cli', function() {
   test('should minify to have been called', function() {
-    const spy = jest.spyOn(nodeMinify, 'minify');
+    var spy = jest.spyOn(nodeMinify, 'minify');
     cli({
       compressor: 'gcc',
       input: 'examples/public/js/sample.js',
@@ -16,15 +16,16 @@ describe('cli', function() {
     });
     expect(spy).toHaveBeenCalled();
   });
-  /*test('should minify to have been called with all compressors', function() {
-    cli({
+  test('should minify to have been called with all compressors', function() {
+    var spy = jest.spyOn(nodeMinify, 'minify');
+    return cli({
       compressor: 'all',
       input: 'examples/public/js/sample.js',
       output: 'examples/public/js-dist/babili-es6.js'
     }).then(function() {
-      expect(this.spy).toHaveBeenCalled();
+      expect(spy).toHaveBeenCalled();
     });
-  });*/
+  });
 });
 
 describe('pretty bytes', function() {
