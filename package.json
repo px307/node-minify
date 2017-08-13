@@ -52,7 +52,7 @@
     "publish-beta": "npm publish --tag beta",
     "prettier": "prettier",
     "prettier-write": "npm run prettier -- --single-quote --print-width 120 --write",
-    "prettier-project": "npm run prettier-write -- '{lib,__tests__}/**/*.js'",
+    "prettier-project": "npm run prettier-write -- '{src,__tests__}/**/*.js'",
     "build": "rimraf lib && babel src -d lib"
   },
   "dependencies": {
